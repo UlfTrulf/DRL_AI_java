@@ -16,7 +16,6 @@ public class Shop {
     public Shop(List<Tile> bag, List<Card> cards) {
         this.bag = bag;
         this.cardPile = cards;
-        Collections.shuffle(this.bag);
         this.sale = new ArrayList<>();
         this.cards = new ArrayList<>();
         for (int i = 0; i < 4; i++) {

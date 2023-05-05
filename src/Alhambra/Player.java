@@ -25,8 +25,8 @@ public class Player {
         this.stash.add(t);
         System.out.println("Tile added: " + t.getCost() + ", " + t.getType() + ", " + t.getBorders());
     }
-    public void addMoney(List<Card> draw) {
-        this.money.addAll(draw);
+    public void addMoney(Card draw) {
+        this.money.add(draw);
     }
 
     public void removeMoney(Card card) {
@@ -119,5 +119,19 @@ public class Player {
             }
         }
         return new Pair<>(values, totals);
+    }
+
+    public int getTotalValue() {
+        int v = 0;
+        for (Card c : this.money) {
+            if (c instanceof Moneycard){
+                v += ((Moneycard) c).getValue();
+            }
+        }
+        return v;
+    }
+
+    public int getAmountOfCards() {
+        return this.money.size();
     }
 }

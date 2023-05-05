@@ -7,6 +7,10 @@ import java.util.List;
 public class Main {
 
         public static void main(String[] args) {
+            String tiles = "data/VanillaTiles1.txt";
+            String cards = "data/VanillaCards1.txt";
+            GameMain game = new GameMain(4, tiles, cards);
+/**
             List <Tile> t = Helper.generateBag("data/VanillaTiles1.txt");
             List <Card> c = Helper.generateCardpile("data/VanillaCards1.txt");
             Collections.shuffle(c);
@@ -37,7 +41,7 @@ public class Main {
                 p.stashTile(bought.getValue1());
             } else {
                 System.out.println("not enough Money");
-            }
+            }**/
 
     }
 }
