@@ -7,7 +7,7 @@ import java.util.List;
 public class Main {
 
         public static void main(String[] args) {
-            String tiles = "data/VanillaTiles1.txt";
+            String tiles = "data/BenderTiles.txt";
             String cards = "data/VanillaCards1.txt";
             GameMain game = new GameMain(4, tiles, cards);
 /**
